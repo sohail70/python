@@ -3,8 +3,11 @@ item2 = "orange"
 item3 = "banana"
 item4 = "peach"
 item5 = "cherries"
-print(item1,item2,item3,item4,item5)
-
+print(item1)
+print(item2)
+print(item3)
+print(item4)
+print(item5)
 
 cost1 = 9.42
 cost2 = 5.67
