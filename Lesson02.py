@@ -97,3 +97,70 @@ def free_change():
 
 free_change()
     
+
+################################################## Arguments, Keyword Arguments, and defaults
+
+######################## 1
+def all_the_snacks(snack,spacer=',',num=100):
+    print(num*(snack+spacer))
+
+all_the_snacks(favSnack)
+
+######################## 2
+all_the_snacks(favSnack,'|')
+all_the_snacks(favSnack,num=42) #using default spacer although its the second argument
+all_the_snacks(favSnack,num=42,spacer='|')
+
+
+################################################## Scope, input
+
+######################## 1
+my_color = input("What's you favorite color? ")
+neighbor_color = input("What's the neighbor favorite color? ")
+
+######################## 2
+my_num = input("What's you favorite number? ")
+#my_num+2 #ERROR because you can't string to number
+print(float(my_num)+2)
+
+######################## 3
+def color_swapper(my_color,neighbor_color):
+    my_color,neighbor_color = neighbor_color,my_color #I can swap them because they are global but it doesnt effect the global var(if you want that you need to use global my_color,)
+    print("My favorite color is %s and my neighbor's favorite color is %s"%(my_color,neighbor_color))
+
+color_swapper(my_color,neighbor_color)
+print("my color is:", my_color) 
+print("neighbor's color is:", neighbor_color)
+
+######################## 4
+def global_color_swapper(): #age vorodi func e bala ro bezari into error mide!
+    global my_color
+    global neighbor_color
+    temp = my_color
+    my_color = neighbor_color
+    neighbor_color = temp #I can swap them because they are global but it doesnt effect the global var(if you want that you need to use global my_color,)
+
+global_color_swapper() #This function is a bad idea
+print("my color is:", my_color) 
+print("neighbor's color is:", neighbor_color)
+
+
+
+################################################## Review
+
+####################### 1
+
+def volume(width,length,height):
+    return width*length*height
+
+####################### 2
+def volume2(width,length,height=1):
+    return width*length*height
+
+####################### 3
+import datetime
+#dir(datetime)
+#dir(datetime.datetime)
+#help(datetime.datetime.today)
+print(datetime.datetime.today())
+print(datetime.datetime.now())
