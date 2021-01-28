@@ -76,3 +76,97 @@ curTime()
 
 
 ################################## While
+
+###################### 1
+i=0
+while i<10:
+    print(favSnack)
+    i+=1
+
+###################### 2
+i=0
+while i<10:
+    print( (favSnack+" ")*i)
+    i+=1
+
+###################### 3
+
+i=0 
+while i<10:
+    print((favSnack+" ")*10,end="")
+    i+=1
+
+
+
+################################## For
+
+##################### 1
+
+for ch in "blood-oxygenation level dependent functional magnetic resonance imaging":
+    print(ch)
+
+##################### 2
+print("Note to self, buy:")
+for i in groceries:
+    print(i)
+
+#################### 3
+j=0
+for i in groceries:
+    print(j,i)
+    j+=1
+
+#################### 4
+
+print("Note to self, buy:")
+for i in groceries:
+    print(i)
+    if i==favSnack:
+        break
+
+#################### 5
+st = "blood-oxygenation level dependent functional magnetic resonance imaging"
+for i in st.split():
+    print(i)
+
+
+################################## For range
+
+################## 1
+
+for i in range(len(groceries)):
+    print(i,groceries[i])
+
+################## 2
+
+for (i,j) in enumerate(groceries):
+    print(i,j)
+
+################## 3
+
+for i in range(10):
+    print(favSnack)
+
+################## 4
+
+i=0
+j=100
+guess =  random.randint(i,j)
+
+while True:
+    userGuess = input("Guess a number between "+"["+str(i)+","+str(j)+"]"+":")
+    try:
+        userGuess = int(userGuess)
+    except:
+        print("That's not a number")
+        continue
+
+    if userGuess==guess:
+       print("You Won")
+       break
+    elif userGuess<guess:
+        print("Go higher")
+        i=userGuess
+    else:
+        print("Go lower")
+        j=userGuess

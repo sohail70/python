@@ -29,7 +29,7 @@ wholeCost = (cardinality1 * cost1
 print(wholeCost)
 ################################ 4
 
-string1 = "blood-oxygenation level dependent functional magnetic resonance imagin"
+string1 = "blood-oxygenation level dependent functional magnetic resonance imaging"
 print(len(string1))
 
 
