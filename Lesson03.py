@@ -164,6 +164,9 @@ while True:
     if userGuess==guess:
        print("You Won")
        break
+    elif userGuess<i or userGuess>j:
+        print("Out Of Range")
+
     elif userGuess<guess:
         print("Go higher")
         i=userGuess
